@@ -1,15 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
     <link rel="stylesheet" href="./styles/navbar.css" />
-    <link rel="stylesheet" href="./styles/quiz.css">
-</head>
-<body>
-    Quiz
+    <link rel="stylesheet" href="./styles/quiz.css" />
+  </head>
+  <body>
+    <div id="nav-container"></div>
+    <div id="container">
+      <div>
+        <p>Questions</p>
+        <div id="labels">
+          <div>
+            <div id="x"></div>
+            <p>Answered</p>
+          </div>
+          <div>
+            <div id="y"></div>
+            <p>Skiped</p>
+          </div>
+          <div>
+            <div id="z"></div>
+            <p>Unanswered</p>
+          </div>
+        </div>
+        <div id="que-no">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+        </div>
+      </div>
+      <div>
+        <div id="head">
+          <p>Gunjan Kuthe</p>
+          <p>50:50</p>
+        </div>
+        <div id="question-container">
+          <div>
+            <p>Question - <span id="question-no">1</span></p>
+            <p>Marks - 1</p>
+          </div>
+          <p id="question">What does the &quot;MP&quot; stand for in MP3 ?</p>
+        </div>
+        <div id="solution">
+          <div class="options">
+            <input type="checkbox" />
+            <p id="a">Micro Point</p>
+          </div>
+          <div class="options">
+            <input type="checkbox" />
+            <p id="b">Micro Point</p>
+          </div>
+          <div class="options">
+            <input type="checkbox" />
+            <p id="c">Micro Point</p>
+          </div>
+          <div class="options">
+            <input type="checkbox" />
+            <p id="d">Micro Point</p>
+          </div>
+        </div>
+        <div id="btn">
+          <button>Submit</button>
+          <button>Skip</button>
+        </div>
+      </div>
+    </div>
+    <script type="module">
+      import nav from "./components/navbar.js";
+      const navbar = document.getElementById("nav-container");
+      navbar.innerHTML = nav("quiz");
+    </script>
     <script src="./scripts/quiz.js"></script>
-</body>
+  </body>
 </html>
