@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Report Card</title>
     <link rel="stylesheet" href="./styles/navbar.css" />
-    <link rel="stylesheet" href="./styles/reportCard.css">
-</head>
-<body>
-    Report Card
+    <link rel="stylesheet" href="./styles/reportCard.css" />
+  </head>
+  <body>
+    <div id="nav-container"></div>
+    <div id="report">
+      <div>
+        <img
+          src="https://aui.atlassian.com/aui/8.8/docs/images/avatar-person.svg"
+          alt=""
+        />
+      </div>
+      <div id="score">
+        <p>Gunjan Kuthe</p>
+        <div>
+          <p>Total Questions</p>
+          <p>10</p>
+        </div>
+        <div>
+          <p>Wrong Answers</p>
+          <p>5</p>
+        </div>
+        <div>
+          <p>Wrong Answers</p>
+          <p>3</p>
+        </div>
+        <div>
+          <p>Total Score</p>
+          <p>10</p>
+        </div>
+      </div>
+    </div>
+    <div id="questions">
+    </div>
+    <script type="module">
+      import nav from "./components/navbar.js";
+      const navbar = document.getElementById("nav-container");
+      navbar.innerHTML = nav("quiz");
+    </script>
     <script src="./scripts/reportCard.js"></script>
-</body>
+  </body>
 </html>

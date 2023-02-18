@@ -1,5 +1,110 @@
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+#report {
+  margin: auto;
+  width: 80%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+#report > div {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#report > div:first-child {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#report > div:last-child {
+  width: 65%;
+}
+img {
+  width: 150px;
+}
+#score > p {
+  font-size: 30px;
+  text-align: center;
+  margin: 30px;
+}
+
+#score > div {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 22px;
+  margin-top: 15px;
+}
+#score > div:last-child {
+  border-top: 1px solid;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#questions > div {
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: auto;
+  padding: 30px;
+  margin-top: 30px;
+}
+#options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  font-size: 20px;
+}
+#options > div {
+  border: 1px solid;
+  padding: 10px;
+  padding-left: 20px;
+}
+#questions > div>div > p {
+  font-size: 20px;
+}
+#questions > div >div> p:first-child {
+  font-weight: bold;
+}
+#questions>div>div:first-child{
+  display: flex;
+gap: 10px;
+}
+#questions > div > p:nth-child(2) {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.green{
+    background-color: green;
+    color: white;
+}
+#temp{
+    border: 1px solid;
+}
+@media all and (min-width: 1000px) {
+  #report {
+    width: 65%;
+  }
+  #questions > div {
+    width: 50%;
+  }
+}
+@media all and (max-width: 800px) {
+  #report {
+    width: 90%;
+    display: block;
+  }
+  #questions > div {
+    width: 90%;
+  }
+  #report > div:first-child,
+  #report > div:last-child {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
