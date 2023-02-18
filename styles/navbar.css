@@ -1,0 +1,19 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+#nav-container {
+  background-color: teal;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5%;
+}
+#nav-container button{
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #ed4d67;
+}

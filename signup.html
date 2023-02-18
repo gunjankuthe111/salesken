@@ -5,10 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
-    <link rel="stylesheet" href="./styles/signup.css">
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/login&signup.css">
 </head>
 <body>
-    Sign UP
+    <div id="nav-container"></div>
+    <div id="container">
+      <div>
+        <div>
+          <div>
+            <img
+              src="https://www.bing.com/th?id=AMMS_cd46a7a8cde385f7a122a6e792b3b639&w=58&h=58&c=7&rs=1&qlt=95&pcl=f9f9f9&o=6&cdv=1&pid=16.1"
+              alt="salesken"
+            />
+          </div>
+          <p>Salesken</p>
+        </div>
+        <form>
+          <label>Name</label><br />
+          <input type="text" placeholder="Enter your name" /><br /><br />
+          <label>Email Address</label><br />
+          <input type="email" placeholder="Enter your email" /><br /><br />
+          <label>Password</label><br />
+          <input
+            type="password"
+            placeholder="Enter the password"
+          /><br /><br />
+          <input type="submit" value="SignUp" />
+        </form>
+        <div>
+          <p>Already have an account ?</p>
+          <a href="login.html"><button>Log In</button></a>
+        </div>
+      </div>
+    </div>
+    <script type="module">
+      import nav from "./components/navbar.js"
+      const navbar = document.getElementById("nav-container")
+      navbar.innerHTML = nav("signup")
+    </script>
     <script src="./scripts/signup.js"></script>
 </body>
 </html>
