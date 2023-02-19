@@ -10,8 +10,6 @@
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
-}
-#report > div {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 #report > div:first-child {
@@ -19,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 30px;
 }
 #report > div:last-child {
   padding-top: 30px;
@@ -39,10 +38,10 @@ img {
   padding-left: 15%;
   padding-right: 15%;
   font-size: 22px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 #score > div:last-child {
-  border-top: 1px solid;
+  border-top: 3px solid teal;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -80,15 +79,16 @@ img {
   margin-bottom: 15px;
 }
 .incorrect {
-  background-color: red;
+  background-color: gray;
   color: white;
 }
 .right {
-  background-color: green;
   color: white;
+  background-color: teal;
 }
 .correct {
-  background-color: teal;
+  background-color: #ed4d67;
+  color: white;
 }
 #temp {
   border: 1px solid;
@@ -104,13 +104,13 @@ img {
   width: 30%;
 }
 #questions > div:first-child > div:first-child {
-  background-color: red;
+  background-color: gray;
 }
 #questions > div:first-child > div:nth-child(2) {
-  background-color: teal;
+  background-color: #ed4d67;
 }
 #questions > div:first-child > div:last-child {
-  background-color: green;
+  background-color: teal;
 }
 #report > div {
   display: flex;
@@ -118,13 +118,14 @@ img {
   gap: 20px;
 }
 #report > div > p {
-  font-size: 20px;
+  font-size: 25px;
+  color: teal;
   text-transform: uppercase;
 }
 
 @media all and (min-width: 1000px) {
   #report {
-    width: 65%;
+    width: 50%;
   }
   #questions > div {
     width: 50%;
@@ -141,7 +142,8 @@ img {
   #report > div:first-child,
   #report > div:last-child {
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 0px;
   }
 }

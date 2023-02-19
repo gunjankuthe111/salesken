@@ -1,3 +1,5 @@
+const user = JSON.parse(localStorage.getItem("user"));
+if (user) window.location.href = "./quiz.html";
 //geting data from localstorage
 const signupData = JSON.parse(localStorage.getItem("signup")) || [];
 
@@ -6,12 +8,12 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   //check if the user is alreadt exist
-  const check = signupData.reduce((acc,ele)=>{
-    if(ele.email===form.email.value) acc = true
-    return acc
-  },false)
+  const check = signupData.reduce((acc, ele) => {
+    if (ele.email === form.email.value) acc = true;
+    return acc;
+  }, false);
 
-  if(check) return alert("This email address is already registered")
+  if (check) return alert("This email address is already registered");
 
   //creating new user and stored it in localstorage
   const user = {
@@ -28,6 +30,6 @@ form.addEventListener("submit", (e) => {
   form.password.value = null;
 
   //user Created alert
-  alert("User Created Successfully")
-  window.location.href = "./index.html"
+  alert("User Created Successfully");
+  window.location.href = "./index.html";
 });

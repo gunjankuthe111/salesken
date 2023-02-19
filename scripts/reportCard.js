@@ -1,8 +1,21 @@
+const submitted = localStorage.getItem("submitted");
+if (!submitted) {
+  alert("You have not submitted the quize please attempt the quize");
+  window.location.href = "./quiz.html";
+}
+
+const user = JSON.parse(localStorage.getItem("user"));
+if (!user) window.location.href = "./index.html";
+
 const answered = JSON.parse(localStorage.getItem("answered")) || [];
 const questions = document.getElementById("questions");
 let markes = 0;
+let skiped = 0;
+let wrongAttempt = 0;
 answered.forEach((ele, i) => {
-  if (ele.marked === ele.correct_answer) markes++;
+  ele.marked === ele.correct_answer ? markes++ : wrongAttempt++;
+
+  if (ele.marked === "skip") skiped++;
   const div = document.createElement("div");
   const div1 = document.createElement("div");
   const p1 = document.createElement("p");
@@ -60,21 +73,22 @@ answered.forEach((ele, i) => {
 
 const total = document.getElementsByClassName("marks");
 const wrong = document.getElementsByClassName("wrong");
-wrong[0].innerText = 10 - Number(markes);
+const skip = document.getElementsByClassName("skip");
+skip[0].innerText = skiped;
+wrong[0].innerText = wrongAttempt - skiped;
 total[0].innerText = markes;
 total[1].innerText = markes;
 
 //logout functionality
-function logOutUser(){
-    localStorage.removeItem("answered")
-    localStorage.removeItem("user")
-    localStorage.removeItem("questions")
-    window.location.href = "./index.html"
+function logOutUser() {
+  localStorage.removeItem("answered");
+  localStorage.removeItem("user");
+  localStorage.removeItem("questions");
+  localStorage.removeItem("submitted");
+  window.location.href = "./index.html";
 }
 
-
-
-const logout = document.querySelector("#nav-container");
-logout.addEventListener("click",()=>{
-    logOutUser();
-})
+const logout = document.getElementById("logout-btn");
+logout.addEventListener("click", () => {
+  logOutUser();
+});

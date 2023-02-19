@@ -1,3 +1,5 @@
+const user = JSON.parse(localStorage.getItem("user"));
+if (user) window.location.href = "./quiz.html";
 //geting data from localstorage
 const signupData = JSON.parse(localStorage.getItem("signup")) || [];
 

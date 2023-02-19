@@ -1,6 +1,17 @@
+const submitted = localStorage.getItem("submitted");
+if (submitted) {
+  alert(
+    "You have already submitted the quize please logout & login again to re-attempt"
+  );
+  window.location.href = "./reportCard.html";
+}
+
 const queNumbers = document.querySelectorAll("#que-no>div");
 //geting user details from localstorage
 const user = JSON.parse(localStorage.getItem("user"));
+
+if (!user) window.location.href = "./index.html";
+
 document.querySelector("#head>p").innerText = user?.name.toUpperCase();
 
 //fetching questions and saving it to localstorage using immediately invoked function
@@ -129,16 +140,19 @@ end.addEventListener("click", () => {
 });
 
 function endQuiz() {
+  localStorage.setItem("submitted", true);
   window.location.href = "./reportCard.html";
 }
 
-//logout functionality
 function logOutUser() {
   localStorage.removeItem("answered");
   localStorage.removeItem("user");
+  localStorage.removeItem("submitted");
   localStorage.removeItem("questions");
   window.location.href = "./index.html";
 }
 
-const logout = document.getElementById("logout");
-logout.addEventListener("click", logOutUser());
+const logout = document.getElementById("logout-btn");
+logout.addEventListener("click", () => {
+  logOutUser();
+});

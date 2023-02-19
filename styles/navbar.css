@@ -13,11 +13,11 @@
   align-items: center;
   padding: 20px 7%;
 }
-#nav-container button{
-    padding: 10px 20px;
-    font-weight: bold;
-    color: #ed4d67;
-    border: none;
-    border-radius: 5px;
-    background-color: white;
+#nav-container button {
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #ed4d67;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
 }
