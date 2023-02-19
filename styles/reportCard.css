@@ -21,6 +21,7 @@
   justify-content: center;
 }
 #report > div:last-child {
+  padding-top: 30px;
   width: 65%;
 }
 img {
@@ -64,27 +65,63 @@ img {
   padding: 10px;
   padding-left: 20px;
 }
-#questions > div>div > p {
+#questions > div > div > p {
   font-size: 20px;
 }
-#questions > div >div> p:first-child {
+#questions > div > div > p:first-child {
   font-weight: bold;
 }
-#questions>div>div:first-child{
+#questions > div > div:first-child {
   display: flex;
-gap: 10px;
+  gap: 10px;
 }
 #questions > div > p:nth-child(2) {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.green{
-    background-color: green;
-    color: white;
+.incorrect {
+  background-color: red;
+  color: white;
 }
-#temp{
-    border: 1px solid;
+.right {
+  background-color: green;
+  color: white;
 }
+.correct {
+  background-color: teal;
+}
+#temp {
+  border: 1px solid;
+}
+#questions > div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+#questions > div:first-child > div {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  width: 30%;
+}
+#questions > div:first-child > div:first-child {
+  background-color: red;
+}
+#questions > div:first-child > div:nth-child(2) {
+  background-color: teal;
+}
+#questions > div:first-child > div:last-child {
+  background-color: green;
+}
+#report > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#report > div > p {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
 @media all and (min-width: 1000px) {
   #report {
     width: 65%;

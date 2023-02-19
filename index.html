@@ -21,13 +21,22 @@
           </div>
           <p>Salesken</p>
         </div>
-        <form>
+        <form id="form">
           <label>Email Address</label><br />
-          <input type="email" placeholder="Enter your email" /><br /><br />
+          <input
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+            minlength="4"
+            required
+          /><br /><br />
           <label>Password</label><br />
           <input
+            id="password"
             type="password"
             placeholder="Enter the password"
+            minlength="4"
+            required
           /><br /><br />
           <input type="submit" value="LogIn" />
         </form>
@@ -38,9 +47,9 @@
       </div>
     </div>
     <script type="module">
-      import nav from "./components/navbar.js"
-      const navbar = document.getElementById("nav-container")
-      navbar.innerHTML = nav("login")
+      import nav from "./components/navbar.js";
+      const navbar = document.getElementById("nav-container");
+      navbar.innerHTML = nav("login");
     </script>
     <script src="./scripts/login.js"></script>
   </body>

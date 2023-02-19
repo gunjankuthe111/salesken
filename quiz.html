@@ -9,7 +9,17 @@
     <link rel="stylesheet" href="./styles/quiz.css" />
   </head>
   <body>
-    <div id="nav-container"></div>
+    <div id="nav-container">
+      <div>
+        <img
+          src="https://assets-global.website-files.com/6317934b72d1344ee25173ef/637d05bceaebe1080883183f_white-logo.svg"
+          alt="salesken"
+        />
+      </div>
+      <div>
+        <button id="logout">LogOut</button>
+      </div>
+    </div>
     <div id="container">
       <div>
         <p>Questions</p>
@@ -42,32 +52,32 @@
       </div>
       <div>
         <div id="head">
-          <p>Gunjan Kuthe</p>
-          <p>50:50</p>
+          <p></p>
+          <button id="end">End Quiz</button>
         </div>
         <div id="question-container">
           <div>
-            <p>Question - <span id="question-no">1</span></p>
+            <p>Question - <span id="question-no"></span></p>
             <p>Marks - 1</p>
           </div>
-          <p id="question">What does the &quot;MP&quot; stand for in MP3 ?</p>
+          <p id="question"></p>
         </div>
         <div id="solution">
           <div class="options">
-            <input type="checkbox" />
-            <p id="a">Micro Point</p>
+            <input name="a" type="checkbox" />
+            <p id="a"></p>
           </div>
           <div class="options">
-            <input type="checkbox" />
-            <p id="b">Micro Point</p>
+            <input name="b" type="checkbox" />
+            <p id="b"></p>
           </div>
           <div class="options">
-            <input type="checkbox" />
-            <p id="c">Micro Point</p>
+            <input name="c" type="checkbox" />
+            <p id="c"></p>
           </div>
           <div class="options">
-            <input type="checkbox" />
-            <p id="d">Micro Point</p>
+            <input name="d" type="checkbox" />
+            <p id="d"></p>
           </div>
         </div>
         <div id="btn">
@@ -76,11 +86,6 @@
         </div>
       </div>
     </div>
-    <script type="module">
-      import nav from "./components/navbar.js";
-      const navbar = document.getElementById("nav-container");
-      navbar.innerHTML = nav("quiz");
-    </script>
     <script src="./scripts/quiz.js"></script>
   </body>
 </html>

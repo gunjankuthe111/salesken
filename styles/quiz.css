@@ -148,7 +148,23 @@
     cursor:not-allowed;
     font-weight: bold;
 }
-
+#end{
+  padding: 10px 20px;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+#end:hover{
+  background-color: rgb(130, 33, 33);
+}
+.skiped{
+  background-color: orange;
+}
+.answered{
+  background-color: green;
+}
 @media all and (min-width:1101px) and (max-width:1400px){
     #container{
         width: 90%;

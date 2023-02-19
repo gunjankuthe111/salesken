@@ -9,41 +9,51 @@
     <link rel="stylesheet" href="./styles/reportCard.css" />
   </head>
   <body>
-    <div id="nav-container"></div>
+    <div id="nav-container">
+      <div>
+        <img
+          src="https://assets-global.website-files.com/6317934b72d1344ee25173ef/637d05bceaebe1080883183f_white-logo.svg"
+          alt="salesken"
+        />
+      </div>
+      <div>
+        <button id="logout">LogOut</button>
+      </div>
+    </div>
     <div id="report">
       <div>
         <img
           src="https://aui.atlassian.com/aui/8.8/docs/images/avatar-person.svg"
           alt=""
         />
+        <p>Gunjan</p>
       </div>
       <div id="score">
-        <p>Gunjan Kuthe</p>
         <div>
           <p>Total Questions</p>
           <p>10</p>
         </div>
         <div>
-          <p>Wrong Answers</p>
-          <p>5</p>
+          <p>Correct Answers</p>
+          <p class="marks"></p>
         </div>
         <div>
           <p>Wrong Answers</p>
-          <p>3</p>
+          <p class="wrong"></p>
         </div>
         <div>
           <p>Total Score</p>
-          <p>10</p>
+          <p class="marks"></p>
         </div>
       </div>
     </div>
     <div id="questions">
+      <div>
+        <div>Wrong Attempt</div>
+        <div>Correct Attempt</div>
+        <div>Correct Answer</div>
+      </div>
     </div>
-    <script type="module">
-      import nav from "./components/navbar.js";
-      const navbar = document.getElementById("nav-container");
-      navbar.innerHTML = nav("quiz");
-    </script>
     <script src="./scripts/reportCard.js"></script>
   </body>
 </html>

@@ -2,10 +2,7 @@ const login = () => {
   return `<a href="./login.html"><button>LogIn</button></a>`;
 };
 const signup = () => {
-  return `<a href="./quiz.html"><button>SignUp</button></a>`;
-};
-const logout = () => {
-  return `<a href="./signup.html"><button>LogOut</button></a>`;
+  return `<a href="./quiz.html"><button id="logout-btn">SignUp</button></a>`;
 };
 const nav = (page) => {
   return `<div>
@@ -15,7 +12,7 @@ const nav = (page) => {
         />
       </div>
       <div>
-        ${page==="login"?signup():(page==="signup"?login():logout())}
+        ${page==="login"?signup():(page==="signup"?login():"")}
       </div>`;
 };
 
